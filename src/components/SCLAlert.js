@@ -53,8 +53,7 @@ class SCLAlert extends React.Component {
   get interpolationTranslate() {
     const move = this.slideAnimation.interpolate({
       inputRange: [0, 1],
-      outputRange: [height, height / -5],
-      useNativeDriver: true
+      outputRange: [height, height / -5]
     })
 
     return [{ translateY: move }]
