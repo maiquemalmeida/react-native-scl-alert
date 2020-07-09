@@ -53,7 +53,8 @@ class SCLAlert extends React.Component {
   get interpolationTranslate() {
     const move = this.slideAnimation.interpolate({
       inputRange: [0, 1],
-      outputRange: [height, height / -5]
+      outputRange: [height, height / -5],
+      useNativeDriver: true
     })
 
     return [{ translateY: move }]
@@ -87,7 +88,8 @@ class SCLAlert extends React.Component {
       const options = {
         toValue: this.state.show ? 0 : 1,
         duration: this.props.slideAnimationDuration,
-        animation: variables.translateEasing
+        animation: variables.translateEasing,
+        useNativeDriver: true
       }
 
       Animated.timing(this.slideAnimation, options).start(resolve)

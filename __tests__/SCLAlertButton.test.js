@@ -8,12 +8,12 @@ describe('<SCLAlertButton />', () => {
   const props = {
     children: 'Lorem',
     containerStyle: {
-      marginTop: 50,
+      marginTop: 50
     },
     textStyle: {
-      fontSize: 20,
+      fontSize: 20
     },
-    onPress: jest.fn(),
+    onPress: jest.fn()
   }
 
   let wrapper
@@ -22,7 +22,7 @@ describe('<SCLAlertButton />', () => {
   })
 
   it('renders correctly', () => {
-    console.log(wrapper.find(View).first())
+    //console.log(wrapper.find(View).first())
     expect(wrapper.length).toBe(1)
     expect(wrapper).toMatchSnapshot()
   })
@@ -32,7 +32,7 @@ describe('<SCLAlertButton />', () => {
       wrapper
         .find(Text)
         .first()
-        .contains(props.children),
+        .contains(props.children)
     ).toBe(true)
   })
 
@@ -50,7 +50,7 @@ describe('<SCLAlertButton />', () => {
       wrapper
         .find(View)
         .first()
-        .props().style[1],
+        .props().style[1]
     ).toEqual(style)
   })
 
@@ -60,7 +60,7 @@ describe('<SCLAlertButton />', () => {
       wrapper
         .find(Text)
         .first()
-        .props().style[1],
+        .props().style[1]
     ).toEqual(style)
   })
 
@@ -69,7 +69,7 @@ describe('<SCLAlertButton />', () => {
       wrapper
         .find(View)
         .first()
-        .props().style[2],
+        .props().style[2]
     ).toEqual(props.containerStyle)
   })
 
@@ -78,7 +78,7 @@ describe('<SCLAlertButton />', () => {
       wrapper
         .find(Text)
         .first()
-        .props().style[2],
+        .props().style[2]
     ).toEqual(props.textStyle)
   })
 })
